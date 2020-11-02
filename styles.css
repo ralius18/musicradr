@@ -1,0 +1,356 @@
+:root {
+  --bg: #121212;
+  --bg2: #242424;
+  --fg: #EFEFEF;
+  --fg_green: #7aeb93;
+  --btn_bg: #EFEFEF;
+  --btn_fg: #121212;
+
+  --transition: none;
+}
+
+/* * {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+} */
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  height: 100%;
+  min-width: 500px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+ul {
+  column-count: 4;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  column-count: 1;
+}
+li {
+  padding: 2px;
+}
+a {
+  color: var(--fg_green);
+}
+a:hover {
+  color: #009c22;
+}
+a:focus {
+  color: #009c22;
+}
+a.artist {
+  color: var(--fg);
+  border: 1px solid;
+  padding: 2px;
+  border-color: var(--bg);
+  margin-left: 5px;
+  font-weight: normal;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+a.artist:hover {
+  color: black;
+  border-color: #009c22;
+  background-color: #7aeb93;
+  text-decoration: none;
+}
+hr {
+  border-color: var(--fg_green);
+}
+.added {
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #009c22;
+  background-color: #7aeb93;
+  color: black;
+}
+.removed {
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #009c22;
+  background-color: #7aeb93;
+  color: black;
+}
+.error {
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #9c0000;
+  background-color: #b62d2d;
+  color: white;
+}
+table {
+  /* width: 100%; */
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  border-radius: 4px;
+}
+td, th {
+  /* border: 1px solid #dddddd; */
+  /* border-bottom: 1px solid #ddd; */
+  border-radius: 4px;
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background-color: var(--bg2);
+}
+
+tr.placeholder {
+  background-color: #444;
+  height: 141px;
+}
+
+table.albums_table {
+  width: 800px;
+}
+
+/* Bootstrap stuff */
+.wrapper{
+  width: 350px;
+  padding: 20px;
+  margin: auto;
+}
+.header {
+  text-align: center;
+}
+.btn-primary {
+  color: black !important;
+  background-color: #7aeb93 !important;
+  border-color: #009c22 !important;
+}
+:hover.btn-primary{
+  color: black !important;
+  background-color: #009c22 !important;
+  border-color: #7aeb93 !important;
+}
+.btn-secondary {
+  color: white !important;
+  background-color: #b62d2d !important;
+  border-color: #9c0000 !important;
+}
+:hover.btn-secondary {
+  color: white !important;
+  background-color: #9c0000 !important;
+  border-color: #b62d2d !important;
+}
+:focus.btn-secondary {
+  background-color: #9c0000 !important;
+}
+.btn {
+  color: var(--btn_fg);
+  margin-right: 10px;
+  background-color: var(--btn_bg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+:hover.btn {
+  background-color: #AAA;
+}
+:focus.btn {
+  color: var(--fg);
+  background-color: #009c22;
+}
+:hover.icon {
+  text-decoration: none !important;
+}
+.fake-btn {
+  color: var(--btn_fg);
+  background-color: var(--btn_bg);
+  width: 100px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.search-bar {
+  max-width: 400px;
+}
+.message.success {
+  color: #009c22 !important;
+}
+span.checkbox {
+  border: 1px solid var(--bg);
+  font-weight: normal;
+  padding: 5px;
+  display: initial;
+}
+span.checkbox:hover {
+  border: 1px solid #009c22;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="checkbox"].hidden {
+  display: none;
+}
+:checked+span.checkbox {
+  color: var(--btn_fg);
+  background-color: #7aeb93;
+  border: 1px solid #009c22;
+  border-radius: 4px;
+}
+:checked+.artist {
+  border: 1px solid #7aeb93;
+}
+.wrapper p {
+  text-align: center;
+}
+.wrapper .btn {
+  display: block;
+  margin: auto;
+}
+.artists-table {
+  /* display: block; */
+  width: 50em;
+  margin: auto;
+}
+.artist-td {
+  vertical-align: 0px;
+  margin: auto;
+  text-align: center;
+}
+table {
+  margin: auto;
+}
+.form-inline {
+  float: left;
+  padding: 5px;
+}
+.form-inline.next {
+  float: right;
+  padding: 5px;
+}
+table.pages {
+  width: inherit;
+}
+td.td-pages {
+  border: none;
+  font-size: 1.5em;
+}
+.center {
+  text-align: center;
+  margin: auto;
+}
+td.album {
+  padding-right: 20px;
+}
+footer {
+  margin-bottom: 0px;
+  height: 50px;
+}
+.footer {
+  margin: auto;
+  text-align: center;
+}
+.footer-right {
+  float: right;
+}
+.footer-left {
+  float: left;
+}
+a.footer-link {
+  color: #777 !important;
+}
+.h1a {
+  text-decoration: none;
+  color: white;
+}
+.h1a:hover {
+  text-decoration: none;
+  color: white;
+}
+.h1a:focus {
+  text-decoration: none;
+  color: white;
+}
+span.explicit {
+  color: #383838;
+  border: 1px solid;
+  border-color: #383838;
+  border-radius: 2px;
+  padding: 0.3em;
+  font-size: x-small;
+  background-color: var(--bg);
+}
+
+/* TODO: Pretty up checkboxes */
+
+button.heart {
+  all: unset;
+  cursor: pointer;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  color: #000;
+  background-color: #7aeb93;
+  border-color: #009c22;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 30px;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+.playing {
+  background-color: var(--bg2);
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  padding: 2px 10px 2px 10px;
+  overflow: auto;
+}
+
+.playing-left {
+  display: flex;
+  align-items: center;
+}
+
+.playing-text {
+  padding-left: 10px;
+  flex-direction: vertical;
+}
