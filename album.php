@@ -93,9 +93,10 @@
             echo '<td class="album">';
             $artist_name = $album['artists'][0]['name'];
             $artist_lower = strtolower($artist_name);
-            $artist_lower = preg_replace('/\b(the|a)\b/', '', $artist_lower);
+            $artist_lower = preg_replace('/^([Tt]he|[Aa])\b/', '', $artist_lower);
             $artist_lower = preg_replace('/[^A-Za-z0-9]*/', '', $artist_lower);
-            $track_lower = strtolower(preg_replace('/[^A-Za-z0-9]*/', '', $track['name']));
+            $track_lower = strtolower(preg_replace('/\([feat|with].*\)/', '', $track['name']));
+            $track_lower = preg_replace('/[^A-Za-z0-9]*/', '', $track_lower);
             echo '<a href="https://azlyrics.com/lyrics/' . $artist_lower . '/' . $track_lower . '.html" target="_blank">' . $track['name'] . '</a>';
             echo '</td>';
 
