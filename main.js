@@ -138,3 +138,15 @@ function toggleAlbumArt() {
   // Change height of drag placeholder
 
 }
+
+function hidePlayer() {
+  $('.playing').hide()
+  // $('.body').css("padding-bottom", "0")
+  $('.show-player').show()
+}
+
+function showPlayer() {
+  $('.playing').show()
+  // $('.body').css("padding-bottom", "10%")
+  $('.show-player').hide()
+}
