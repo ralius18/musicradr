@@ -1,4 +1,6 @@
-![Music Radr](resources/logo_dark.png)
+![Music Radar](/resources/logo-dark.png)
+
+#### This project is currently not in use or maintained (ironically)
 
 [🎵 Radr](https://musicradr.com) (Music Radar) is a free and simple way to track new releases from your favourite artists.
 Once a day, Spotify is checked for any new releases and emails you if an artist you follow has released a new album, single or compilation.
@@ -13,4 +15,3 @@ The linking to [AZ Lyrics](https://www.azlyrics.com/) for each song is just an a
 
 A sample config.ini file is in the repository, with it's parent directory made private
 
-DB details
